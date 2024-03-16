@@ -18,5 +18,7 @@ npm run dev
 
 Переодическое обновление в app/Console/Kernel.php
 
+php artisan schedule:run
+
 Эндпоинты (rest api) app/Http/Controllers/OffersController.php
 
