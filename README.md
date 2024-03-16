@@ -15,3 +15,4 @@ npm run dev
 Добавить url для спарсивания, можно на главной странице.
 Спарсивание xml файлов (создание/обновление) осуществялется в app/Jobs/xmlHandlerJob.php
 Переодическое обновление в app/Console/Kernel.php
+Эндпоинты (rest api) app/Http/Controllers/OffersController.php
