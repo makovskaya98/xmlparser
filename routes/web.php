@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\OffersController;
+use App\Jobs\xmlHandlerJob;
+use App\Models\Feeds;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ParseXml;
+use App\Http\Controllers\XmlController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +17,8 @@ use App\Http\Controllers\ParseXml;
 |
 */
 
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', XmlController::class)->name('main');
+
+Route::post('/', [XmlController::class, 'createFeedUrl']);
+
+Route::apiResource('api/offers', OffersController::class);
